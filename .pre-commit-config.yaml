@@ -5,3 +5,9 @@ repos:
   hooks:
   - id: editorconfig-checker
     alias: ec
+
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.32.0
+  hooks:
+  - id: yamllint
+    args: [-c=.yamllint.yaml]
