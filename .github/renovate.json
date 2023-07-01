@@ -1,0 +1,23 @@
+
+{
+  "repositories": ["BeeHiveJava/template"],
+  "suppressNotifications": ["prIgnoreNotification"],
+
+  "extends": [
+    "config:base",
+    ":enablePreCommit",
+    ":disableDependencyDashboard",
+    ":disableRateLimiting",
+    ":semanticCommits"
+  ],
+
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeType": "branch",
+      "requiredStatusChecks": null,
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": ["renovatebot/github-action"]
+    }
+  ]
+}
