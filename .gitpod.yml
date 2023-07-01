@@ -1,0 +1,4 @@
+---
+tasks:
+- name: install dependencies
+  before: sh install.sh
