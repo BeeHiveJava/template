@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
 
     - name: Run editorconfig-checker
-      uses: editorconfig-checker/action-editorconfig-checker@v1
+      uses: editorconfig-checker/action-editorconfig-checker@v2
 
   yamllint:
     runs-on: ubuntu-latest
