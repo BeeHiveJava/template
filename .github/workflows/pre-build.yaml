@@ -1,0 +1,47 @@
+---
+name: pre-build
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+    - main
+
+env:
+  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_REGISTRY: ghcr.io
+  IMAGE_REGISTRY_USER: ${{ github.repository_owner }}
+  IMAGE_REGISTRY_PASS: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  pre-build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    strategy:
+      matrix:
+        template: [default, dotnet]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+    - name: Login ghcr
+      uses: docker/login-action@v3
+      with:
+        registry: ${{ env.IMAGE_REGISTRY }}
+        username: ${{ env.IMAGE_REGISTRY_USER }}
+        password: ${{ env.IMAGE_REGISTRY_PASS }}
+
+    - name: Transform image name
+      run: echo "IMAGE_NAME=${IMAGE_NAME@L}" >> "${GITHUB_ENV}"
+
+    - name: Pre-Build container image
+      uses: devcontainers/ci@v0.3
+      with:
+        imageName: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}
+        imageTag: ${{ matrix.template }}
+        push: always

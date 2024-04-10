@@ -1,0 +1,10 @@
+{
+  "id": "dotnet",
+  "name": "C# (dotnet)",
+  "version": "1.0.0",
+  "publisher": "BeeHiveJava",
+  "description": "Dotnet container with default utilities installed.",
+  "documentationURL": "https://github.com/BeeHiveJava/template/blob/main/dotnet",
+  "licenseURL": "https://github.com/BeeHiveJava/template/blob/main/LICENSE",
+  "platforms": ["Any"]
+}
