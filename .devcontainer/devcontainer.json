@@ -6,10 +6,10 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": "latest",
     "ghcr.io/devcontainers-contrib/features/pipx-package:1": {
       "package": "editorconfig-checker",
-      "version": "2.7.3"
+      "version": "latest"
     },
-    "ghcr.io/devcontainers-contrib/features/pre-commit:2": "3.7.0",
-    "ghcr.io/devcontainers-contrib/features/yamllint:2": "1.35.1"
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": "latest",
+    "ghcr.io/devcontainers-contrib/features/yamllint:2": "latest"
   },
   "customizations": {
     "vscode": {

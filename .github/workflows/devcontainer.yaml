@@ -1,5 +1,5 @@
 ---
-name: pre-build
+name: devcontainer
 
 # yamllint disable-line rule:truthy
 on:
@@ -44,4 +44,5 @@ jobs:
       with:
         imageName: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}
         imageTag: ${{ matrix.template }}
+        subFolder: .devcontainer/templates/${{ matrix.template }}
         push: always
