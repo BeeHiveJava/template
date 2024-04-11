@@ -23,7 +23,7 @@ jobs:
 
     strategy:
       matrix:
-        template: [default, dotnet]
+        template: [default, dotnet, azure]
 
     steps:
     - name: Checkout code

@@ -1,8 +1,10 @@
 {
-  "name": "template",
-  "image": "mcr.microsoft.com/devcontainers/base:debian",
-  "postCreateCommand": "pre-commit install --install-hooks",
+  "name": "C# (dotnet)",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
   "features": {
+    "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools": {},
+    "ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {},
+    "ghcr.io/devcontainers/features/azure-cli": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
     "ghcr.io/devcontainers-contrib/features/yamllint:2": {},
@@ -16,7 +18,11 @@
       "extensions": [
         "EditorConfig.EditorConfig",
         "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-bicep",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "ms-vscode.vscode-node-azure-pack"
       ]
     }
   }
