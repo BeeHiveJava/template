@@ -1,7 +1,9 @@
 {
   "name": "C# (dotnet)",
   "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  "forwardPorts": [2222],
   "features": {
+    "ghcr.io/devcontainers/features/sshd": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
     "ghcr.io/devcontainers-contrib/features/yamllint:2": {},
