@@ -1,6 +1,6 @@
 {
   "name": "template",
-  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
   "postCreateCommand": "sh chezmoi.sh && pre-commit install --install-hooks",
   "forwardPorts": [2222],
   "features": {

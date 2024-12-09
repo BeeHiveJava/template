@@ -14,6 +14,12 @@
       "groupSlug": "npm",
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "nuget dependencies",
+      "groupSlug": "nuget",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ]
 }

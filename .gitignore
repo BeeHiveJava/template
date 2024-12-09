@@ -1,8 +1,3 @@
-
-# Build files
-**/node_modules/
-**/dist/
-
 # Generally ignored files
 **/.aws/
 **/.sam/
@@ -11,14 +6,20 @@
 **/*.env
 **/.decrypted~*
 
+# Build files
+**/node_modules/
+**/dist/
+**/[Bb]in/
+**/[Oo]bj/
+
 # Terraform files
 **/.terraform/
 **/*.tfstate*
 **/*.tfvars*
 
-# Ignore files created by IDEs
+# IDE files
 **/.idea/
 **/.vscode/
 
-# Include specific files
+# Specific files to keep
 !.gitkeep
