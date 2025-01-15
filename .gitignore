@@ -1,6 +1,7 @@
 # Generally ignored files
 **/.aws/
 **/.sam/
+**/.yarn/
 **/*.log*
 **/*.db*
 **/*.env
@@ -8,14 +9,9 @@
 
 # Build files
 **/node_modules/
+**/generated
 **/dist/
-**/[Bb]in/
-**/[Oo]bj/
-
-# Terraform files
-**/.terraform/
-**/*.tfstate*
-**/*.tfvars*
+**/cdk.out/
 
 # IDE files
 **/.idea/

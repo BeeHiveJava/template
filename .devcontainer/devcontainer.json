@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:9.0-bookworm",
+  "name": "wom-sync",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   "postCreateCommand": "sh chezmoi.sh && pre-commit install --install-hooks",
   "forwardPorts": [2222],
   "features": {
@@ -11,18 +11,19 @@
     "ghcr.io/devcontainers-contrib/features/pipx-package:1": {
       "package": "editorconfig-checker",
       "version": "latest"
-    }
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers-extra/features/aws-cdk:2": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
-        "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker"
+        "redhat.vscode-yaml"
       ]
     }
   },
   "mounts": [
-    "source=C:/sops/age/keys.txt,target=/home/vscode/.config/sops/age/keys.txt,type=bind,consistency=cached"
+    "source=C:/sops/age/keys.txt,target=/home/node/.config/sops/age/keys.txt,type=bind,consistency=cached"
   ]
 }

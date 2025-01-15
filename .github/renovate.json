@@ -12,12 +12,14 @@
     {
       "groupName": "npm dependencies",
       "groupSlug": "npm",
+      "matchDatasources": ["npm"],
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
       "groupName": "nuget dependencies",
       "groupSlug": "nuget",
+      "matchDatasources": ["nuget"],
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
