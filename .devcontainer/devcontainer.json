@@ -1,6 +1,6 @@
 {
   "name": "template",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
   "postCreateCommand": "sh chezmoi.sh && pre-commit install --install-hooks",
   "forwardPorts": [2222],
   "features": {
