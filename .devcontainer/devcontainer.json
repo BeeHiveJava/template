@@ -1,19 +1,17 @@
 {
-  "name": "wom-sync",
+  "name": "template",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   "postCreateCommand": "sh chezmoi.sh && pre-commit install --install-hooks",
   "forwardPorts": [2222],
   "features": {
     "ghcr.io/devcontainers/features/sshd": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
-    "ghcr.io/devcontainers-contrib/features/yamllint:2": {},
-    "ghcr.io/devcontainers-contrib/features/pipx-package:1": {
+    "ghcr.io/devcontainers-extra/features/pre-commit:2": {},
+    "ghcr.io/devcontainers-extra/features/yamllint:2": {},
+    "ghcr.io/devcontainers-extra/features/pipx-package:1": {
       "package": "editorconfig-checker",
       "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers-extra/features/aws-cdk:2": {}
+    }
   },
   "customizations": {
     "vscode": {

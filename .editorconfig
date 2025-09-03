@@ -9,7 +9,7 @@ indent_style = space
 indent_size = 4
 
 # Visual Studio Solution Files
-[*.sln]
+[*.{sln,slnx}]
 indent_style = tab
 
 # Visual Studio XML Project Files

@@ -12,10 +12,13 @@
 **/generated
 **/dist/
 **/cdk.out/
+**/bin/
+**/obj/
 
 # IDE files
 **/.idea/
 **/.vscode/
+**/*.DotSettings.user
 
 # Specific files to keep
 !.gitkeep
